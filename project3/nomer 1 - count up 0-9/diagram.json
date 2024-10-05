@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "Bayu Dwi Cahyono",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -12.6, "left": 204.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -115.8, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 52.98,
+      "left": 264.28,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 42.35,
+      "left": 288,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 128.75,
+      "left": 288,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "r1:1", "bb1:7t.b", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:13t.b", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:7b.i", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:13b.i", "", [ "$bb" ] ],
+    [ "uno:GND.1", "bb1:tn.1", "black", [ "v-28.8", "h192.3", "v28.8" ] ],
+    [ "bb1:13t.a", "bb1:tn.10", "black", [ "v0" ] ],
+    [ "bb1:13b.f", "bb1:13t.e", "black", [ "v0" ] ],
+    [ "uno:2", "bb1:9b.j", "violet", [ "v230.4", "h186.5" ] ],
+    [ "bb1:8b.j", "uno:3", "gold", [ "v96", "h-182.4" ] ],
+    [ "uno:4", "bb1:6b.j", "orange", [ "v249.6", "h176.7" ] ],
+    [ "uno:5", "bb1:5b.j", "limegreen", [ "v259.2", "h176.6" ] ],
+    [ "sevseg1:COM.1", "bb1:7b.h", "", [ "$bb" ] ],
+    [ "sevseg1:COM.2", "bb1:7t.c", "", [ "$bb" ] ],
+    [ "sevseg1:A", "bb1:8t.c", "", [ "$bb" ] ],
+    [ "sevseg1:B", "bb1:9t.c", "", [ "$bb" ] ],
+    [ "sevseg1:C", "bb1:8b.h", "", [ "$bb" ] ],
+    [ "sevseg1:D", "bb1:6b.h", "", [ "$bb" ] ],
+    [ "sevseg1:E", "bb1:5b.h", "", [ "$bb" ] ],
+    [ "sevseg1:F", "bb1:6t.c", "", [ "$bb" ] ],
+    [ "sevseg1:G", "bb1:5t.c", "", [ "$bb" ] ],
+    [ "sevseg1:DP", "bb1:9b.h", "", [ "$bb" ] ],
+    [ "bb1:9t.a", "uno:6", "magenta", [ "v-86.4", "h-220.8" ] ],
+    [ "bb1:8t.a", "uno:7", "gold", [ "v-96", "h-220.8" ] ],
+    [ "bb1:6t.a", "uno:8", "orange", [ "v-105.6", "h-220.8" ] ],
+    [ "bb1:5t.a", "uno:9", "limegreen", [ "v-115.2", "h-220.8" ] ]
+  ],
+  "dependencies": {}
+}
